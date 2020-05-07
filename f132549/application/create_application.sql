@@ -53,8 +53,8 @@ wwv_flow_api.create_flow(
 ,p_friendly_url=>'N'
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'APEX 20.1 New Features'
-,p_last_updated_by=>'SCOTT'
-,p_last_upd_yyyymmddhh24miss=>'20200506195202'
+,p_last_updated_by=>'SCOTT@SUMNERTECH.COM'
+,p_last_upd_yyyymmddhh24miss=>'20200507131020'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>7
 ,p_ui_type_name => null
