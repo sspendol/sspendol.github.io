@@ -1,0 +1,211 @@
+prompt --application/pages/page_00210
+begin
+--   Manifest
+--     PAGE: 00210
+--   Manifest End
+wwv_flow_api.component_begin (
+ p_version_yyyy_mm_dd=>'2020.03.31'
+,p_release=>'20.1.0.00.13'
+,p_default_workspace_id=>37447468962029108913
+,p_default_application_id=>132549
+,p_default_id_offset=>0
+,p_default_owner=>'SUMNER'
+);
+wwv_flow_api.create_page(
+ p_id=>210
+,p_user_interface_id=>wwv_flow_api.id(5419449436002037622)
+,p_name=>'Faceted Search'
+,p_alias=>'FACETED-SEARCH'
+,p_step_title=>'Faceted Search'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>wwv_flow_api.id(5419111572499037512)
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'SCOTT@SUMNERTECH.COM'
+,p_last_upd_yyyymmddhh24miss=>'20200505214435'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(28088561681693625402)
+,p_plug_name=>'Cars'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(5419164763057037555)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'REGION_POSITION_02'
+,p_plug_source_type=>'NATIVE_FACETED_SEARCH'
+,p_filtered_region_id=>wwv_flow_api.id(28088561790444625403)
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_attribute_01=>'N'
+,p_attribute_06=>'N'
+,p_attribute_09=>'N'
+,p_attribute_12=>'10000'
+);
+wwv_flow_api.create_report_region(
+ p_id=>wwv_flow_api.id(28088561790444625403)
+,p_name=>'Cars'
+,p_template=>wwv_flow_api.id(5419164763057037555)
+,p_display_sequence=>20
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#:t-Report--stretch:t-Report--altRowsDefault:t-Report--rowHighlight'
+,p_display_point=>'BODY'
+,p_source_type=>'NATIVE_SQL_REPORT'
+,p_query_type=>'TABLE'
+,p_query_table=>'CARS'
+,p_include_rowid_column=>false
+,p_ajax_enabled=>'Y'
+,p_query_row_template=>wwv_flow_api.id(5419193607402037575)
+,p_query_num_rows=>15
+,p_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_query_num_rows_type=>'NEXT_PREVIOUS_LINKS'
+,p_pagination_display_position=>'BOTTOM_RIGHT'
+,p_csv_output=>'N'
+,p_prn_output=>'N'
+,p_sort_null=>'L'
+,p_plug_query_strip_html=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28088561841115625404)
+,p_query_column_id=>1
+,p_column_alias=>'CAR_ID'
+,p_column_display_sequence=>1
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28088561923813625405)
+,p_query_column_id=>2
+,p_column_alias=>'MANUFACTURER'
+,p_column_display_sequence=>2
+,p_column_heading=>'Manufacturer'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28088562030638625406)
+,p_query_column_id=>3
+,p_column_alias=>'MODEL'
+,p_column_display_sequence=>3
+,p_column_heading=>'Model'
+,p_use_as_row_header=>'N'
+,p_column_alignment=>'CENTER'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28088562101297625407)
+,p_query_column_id=>4
+,p_column_alias=>'MODEL_YEAR'
+,p_column_display_sequence=>4
+,p_column_heading=>'Model Year'
+,p_use_as_row_header=>'N'
+,p_column_alignment=>'CENTER'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28088562268640625408)
+,p_query_column_id=>5
+,p_column_alias=>'VIN'
+,p_column_display_sequence=>5
+,p_column_heading=>'VIN'
+,p_use_as_row_header=>'N'
+,p_column_alignment=>'CENTER'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28088562323517625409)
+,p_query_column_id=>6
+,p_column_alias=>'PRICE'
+,p_column_display_sequence=>6
+,p_column_heading=>'Price'
+,p_use_as_row_header=>'N'
+,p_column_format=>'FML999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(28088562406520625410)
+,p_name=>'P210_SEARCH'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(28088561681693625402)
+,p_prompt=>'Search'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_SEARCH'
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'ROW'
+,p_attribute_02=>'FACET'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(28088562555559625411)
+,p_name=>'P210_MANUFACTURER'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_api.id(28088561681693625402)
+,p_prompt=>'Manufacturer'
+,p_source=>'MANUFACTURER'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_CHECKBOX'
+,p_item_template_options=>'#DEFAULT#'
+,p_fc_collapsible=>true
+,p_fc_initial_collapsed=>false
+,p_fc_compute_counts=>true
+,p_fc_show_counts=>true
+,p_fc_zero_count_entries=>'H'
+,p_fc_show_more_count=>5
+,p_fc_filter_values=>true
+,p_fc_sort_by_top_counts=>true
+,p_fc_show_selected_first=>false
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(28088562657893625412)
+,p_name=>'P210_MODEL'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_api.id(28088561681693625402)
+,p_prompt=>'Model'
+,p_source=>'MODEL'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_CHECKBOX'
+,p_depending_on_id=>wwv_flow_api.id(28088562555559625411)
+,p_depending_on_condition_type=>'NOT_NULL'
+,p_item_template_options=>'#DEFAULT#'
+,p_fc_collapsible=>true
+,p_fc_initial_collapsed=>false
+,p_fc_compute_counts=>true
+,p_fc_show_counts=>true
+,p_fc_zero_count_entries=>'H'
+,p_fc_show_more_count=>10
+,p_fc_filter_values=>false
+,p_fc_sort_by_top_counts=>true
+,p_fc_show_selected_first=>false
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(28088562788354625413)
+,p_name=>'P210_MODEL_YEAR'
+,p_source_data_type=>'NUMBER'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_api.id(28088561681693625402)
+,p_prompt=>'Model Year'
+,p_source=>'MODEL_YEAR'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_RANGE'
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'Y'
+,p_attribute_02=>'N'
+,p_fc_collapsible=>true
+,p_fc_initial_collapsed=>false
+,p_fc_compute_counts=>true
+,p_fc_show_counts=>true
+,p_fc_zero_count_entries=>'H'
+);
+wwv_flow_api.component_end;
+end;
+/
