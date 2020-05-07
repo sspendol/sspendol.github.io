@@ -20,7 +20,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'SCOTT@SUMNERTECH.COM'
-,p_last_upd_yyyymmddhh24miss=>'20200507132409'
+,p_last_upd_yyyymmddhh24miss=>'20200507140505'
 );
 wwv_flow_api.create_report_region(
  p_id=>wwv_flow_api.id(6884769434645821601)
@@ -109,7 +109,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>2
 ,p_column_heading=>'Title'
 ,p_use_as_row_header=>'N'
-,p_heading_alignment=>'RIGHT'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
